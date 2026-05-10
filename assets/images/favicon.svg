@@ -1,6 +1,6 @@
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <!-- Main Purple Circle -->
     <circle cx="15" cy="17" r="14" fill="#a66b92" />
-    <!-- Olive Circle (Smaller, overlapping) -->
-    <circle cx="21" cy="11" r="7" fill="#b2b296" opacity="0.9" />
+    <!-- Olive Circle (Smaller and repositioned inside) -->
+    <circle cx="19" cy="15" r="5" fill="#b2b296" opacity="0.9" />
 </svg>
