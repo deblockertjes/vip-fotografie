@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="portfolio-detail-page">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        })();
+    </script>
     <header>
         <nav class="container">
             <div class="logo">
@@ -27,6 +35,7 @@
             <ul class="nav-links">
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#portfolio">Terug naar Portfolio</a></li>
+                <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">🌓</button></li>
             </ul>
         </nav>
     </header>

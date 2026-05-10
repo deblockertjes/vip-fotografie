@@ -1,4 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Theme Toggle (Dark Mode) ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+        if (themeToggle) themeToggle.textContent = '☀️';
+    }
+
+    // --- Header Style Helper ---
+    const updateHeaderStyle = () => {
+        if (!header) return;
+        const isDark = body.classList.contains('dark-theme');
+        if (window.scrollY > 50) {
+            header.style.padding = '10px 0';
+            header.style.backgroundColor = isDark ? 'rgba(18, 18, 18, 0.85)' : 'rgba(252, 252, 252, 0.85)';
+            header.style.backdropFilter = 'blur(10px)';
+        } else {
+            header.style.padding = '20px 0';
+            header.style.backgroundColor = isDark ? 'rgba(18, 18, 18, 0.7)' : 'rgba(252, 252, 252, 0.7)';
+            header.style.backdropFilter = 'blur(5px)';
+        }
+    };
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDark = body.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            themeToggle.textContent = isDark ? '☀️' : '🌓';
+            updateHeaderStyle(); // Immediate update on toggle
+        });
+    }
+
     // --- Hero Dynamic Background ---
     const hero = document.getElementById('home');
     const heroBg = document.querySelector('.hero-bg');
@@ -88,15 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Header Scroll Effect ---
     const header = document.querySelector('header');
     if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.style.padding = '10px 0';
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                header.style.padding = '20px 0';
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
+        window.addEventListener('scroll', updateHeaderStyle);
+        updateHeaderStyle(); // Set initial style correctly
     }
 
     // --- Lightbox Functionality ---

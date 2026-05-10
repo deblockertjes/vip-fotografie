@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+        // Inline script to prevent theme flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        })();
+    </script>
     <header>
         <nav class="container">
             <div class="logo">
@@ -32,6 +41,7 @@
                 <li><a href="#over">Over</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">🌓</button></li>
             </ul>
             <div class="hamburger">
                 <span></span>
