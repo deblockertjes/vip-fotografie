@@ -14,7 +14,7 @@
 /* Dark Theme Variables */
 body.dark-theme {
     --bg-color: #121212;
-    --text-color: #f0f0f0; /* Lighter text for dark mode */
+    --text-color: #e8e8e8; /* Slightly darker than before, but still lighter than original */
     --white: #1e1e1e;
     --gray-light: #333333;
 }
