@@ -546,23 +546,18 @@ footer {
         top: 0;
         flex-direction: column;
         background-color: var(--bg-color);
-        width: 80%;
+        width: 100%; /* Full width for cleaner look on mobile */
         height: 100vh;
         justify-content: center;
         text-align: center;
         transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-        padding: 40px 0;
         z-index: 1000;
-    }
-
-    body.dark-theme .nav-links {
-        background-color: #1a1e1e; /* Slightly lighter than pure black for contrast */
-        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        visibility: hidden; /* Hide from screen readers and layout when closed */
     }
 
     .nav-links.active {
         right: 0;
+        visibility: visible;
     }
 
     .nav-links li {
@@ -594,6 +589,15 @@ footer {
 /* Hamburger animation */
 .hamburger.active span:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+});
 }
 
 .hamburger.active span:nth-child(2) {
