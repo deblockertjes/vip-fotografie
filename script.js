@@ -128,6 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
         updateHeaderStyle(); // Set initial style correctly
     }
 
+    // --- Copyright Year ---
+    const yearElements = document.querySelectorAll('.current-year');
+    const currentYear = new Date().getFullYear();
+    yearElements.forEach(el => el.textContent = currentYear);
+
     // --- Lightbox Functionality ---
     const initLightbox = () => {
         const triggers = document.querySelectorAll('.lightbox-trigger');
