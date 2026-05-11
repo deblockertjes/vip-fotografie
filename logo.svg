@@ -1,0 +1,33 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap');
+        </style>
+    </defs>
+    <!-- Background Circle (Purple) -->
+    <circle cx="250" cy="250" r="235" fill="#a66b92" />
+    
+    <!-- Overlaid Circle (Olive) -->
+    <circle cx="345" cy="180" r="90" fill="#b2b296" opacity="0.9" />
+    
+    <!-- Main Text: vip fotografie -->
+    <text x="250" y="185" font-family="'Playfair Display', serif" font-size="64" font-weight="700" fill="#fcfcfc" text-anchor="middle" style="text-transform: lowercase;">vip fotografie</text>
+    
+    <!-- Name: PAUL VAN IMPE -->
+    <text x="300" y="225" font-family="'Lato', sans-serif" font-size="28" font-weight="400" fill="#fcfcfc" text-anchor="middle" letter-spacing="4">PAUL VAN IMPE</text>
+    
+    <!-- Contact Info Section -->
+    <g transform="translate(100, 310)" fill="none" stroke="#fcfcfc" stroke-width="2">
+        <!-- Camera Icon -->
+        <path d="M5 10 L15 10 L18 5 L32 5 L35 10 L45 10 L45 35 L5 35 Z" />
+        <circle cx="25" cy="22" r="7" />
+        <text x="60" y="28" font-family="'Lato', sans-serif" font-size="26" font-weight="300" fill="#fcfcfc" stroke="none">0473 63.29.48</text>
+    </g>
+    
+    <g transform="translate(100, 360)" fill="none" stroke="#fcfcfc" stroke-width="2">
+        <!-- Envelope Icon -->
+        <rect x="5" y="5" width="40" height="28" rx="2" />
+        <path d="M5 5 L25 22 L45 5" />
+        <text x="60" y="28" font-family="'Lato', sans-serif" font-size="26" font-weight="300" fill="#fcfcfc" stroke="none">foto.vip@skynet.be</text>
+    </g>
+</svg>
