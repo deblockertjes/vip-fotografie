@@ -3,16 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP Fotografie | Paul Van Impe</title>
+    <title>Binnenkort Beschikbaar | VIP Fotografie</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .coming-soon-hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--bg-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coming-soon-content {
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .coming-soon-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .coming-soon-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .coming-soon-logo {
+            margin-bottom: 50px;
+        }
+
+        .coming-soon-footer {
+            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+            width: 100%;
+        }
+
+        .coming-soon-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .coming-soon-contact p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .coming-soon-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: url('assets/images/natuur-4.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
     <script>
-        // Inline script to prevent theme flash
         (function() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
@@ -20,153 +88,35 @@
             }
         })();
     </script>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <a href="index.html" class="logo-link">
-                    <svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Main Purple Circle -->
-                        <circle cx="40" cy="40" r="35" fill="#a66b92" />
-                        <!-- Olive Circle (Positioned: r=12, adjusted up and right) -->
-                        <circle cx="56" cy="32" r="12" fill="#b2b296" opacity="0.9" />
-                        
-                        <!-- Text Group -->
-                        <text x="90" y="38" font-family="'Playfair Display', serif" font-size="28" font-weight="700" fill="#a66b92" style="text-transform: lowercase;">vip fotografie</text>
-                        <text x="90" y="62" font-family="'Lato', sans-serif" font-size="13" font-weight="400" fill="#b2b296" letter-spacing="3">PAUL VAN IMPE</text>
-                    </svg>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#over">Over</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">🌓</button></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home" class="hero fade-in">
-            <div class="hero-bg"></div>
-            <div class="hero-content container">
-                <h2>Vastleggen van betekenisvolle momenten</h2>
-                <p>Elegante fotografie met een oog voor detail en emotie.</p>
-                <a href="#portfolio" class="btn">Bekijk Portfolio</a>
-            </div>
-        </section>
-
-        <section id="over" class="about container fade-in">
-            <div class="section-title">
-                <span>Passie & Visie</span>
-                <h2>Over VIP Fotografie</h2>
-            </div>
-            <div class="about-content">
-                <p>Mijn naam is Paul Van Impe, het gezicht achter VIP Fotografie. Met jarenlange ervaring in diverse takken van de fotografie, streef ik ernaar om elk moment te vangen in zijn meest pure vorm.</p>
-                <p>Of het nu gaat om de tederheid van een huwelijk, de vreugde van een communiefeest, de energie van een evenement of de rust van de natuur; ik leg het vast met een moderne, minimalistische stijl die de essentie van het onderwerp laat spreken.</p>
-            </div>
-        </section>
-
-        <section id="portfolio" class="portfolio container fade-in">
-            <div class="section-title">
-                <span>Mijn Werk</span>
-                <h2>Portfolio</h2>
+    <main class="coming-soon-hero">
+        <div class="coming-soon-bg"></div>
+        
+        <div class="coming-soon-content container fade-in visible">
+            <div class="coming-soon-logo">
+                <svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="35" fill="#a66b92" />
+                    <circle cx="56" cy="32" r="12" fill="#b2b296" opacity="0.9" />
+                    <text x="90" y="38" font-family="'Playfair Display', serif" font-size="28" font-weight="700" fill="#a66b92" style="text-transform: lowercase;">vip fotografie</text>
+                    <text x="90" y="62" font-family="'Lato', sans-serif" font-size="13" font-weight="400" fill="#b2b296" letter-spacing="3">PAUL VAN IMPE</text>
+                </svg>
             </div>
 
-            <div class="portfolio-category">
-                <div class="category-header">
-                    <h3>Trouwfoto's</h3>
-                    <a href="portfolio-trouw.html" class="view-more">Bekijk trouwfotografie &rarr;</a>
+            <h1>Binnenkort online</h1>
+            <p>We leggen momenteel de laatste hand aan onze nieuwe website. Binnenkort ontdekt u hier onze volledige portfolio.</p>
+            
+            <div class="coming-soon-footer">
+                <div class="coming-soon-contact">
+                    <p><span class="icon">📞</span> 0473 63.29.48</p>
+                    <p><span class="icon">✉️</span> <a href="mailto:foto.vip@skynet.be" style="color: inherit; text-decoration: none;">foto.vip@skynet.be</a></p>
                 </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/trouw-1.jpg" alt="Trouwfoto 1"></div>
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/trouw-2.jpg" alt="Trouwfoto 2"></div>
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/trouw-3.jpg" alt="Trouwfoto 3"></div>
-                </div>
+                <p style="margin-top: 30px; font-size: 0.9rem;">&copy; <span id="year"></span> VIP Fotografie Paul Van Impe</p>
             </div>
-
-            <div class="portfolio-category">
-                <div class="category-header">
-                    <h3>Communiefeesten</h3>
-                    <a href="portfolio-communie.html" class="view-more">Bekijk communiefotografie &rarr;</a>
-                </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/communie-1.jpg" alt="Communie 1"></div>
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/communie-2.jpg" alt="Communie 2"></div>
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/communie-3.jpg" alt="Communie 3"></div>
-                </div>
-            </div>
-
-            <div class="portfolio-category">
-                <div class="category-header">
-                    <h3>Evenementen</h3>
-                    <a href="portfolio-evenementen.html" class="view-more">Bekijk evenementenfotografie &rarr;</a>
-                </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/evenementen-1.jpg" alt="Evenement 1"></div>
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/evenementen-2.jpg" alt="Evenement 2"></div>
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/evenementen-3.jpg" alt="Evenement 3"></div>
-                </div>
-            </div>
-
-            <div class="portfolio-category">
-                <div class="category-header">
-                    <h3>Natuur</h3>
-                    <a href="portfolio-natuur.html" class="view-more">Bekijk natuurfotografie &rarr;</a>
-                </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/natuur-1.jpg" alt="Natuur 1"></div>
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/natuur-2.jpg" alt="Natuur 2"></div>
-                    <div class="portfolio-item lightbox-trigger"><img src="assets/images/natuur-3.jpg" alt="Natuur 3"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact container fade-in">
-            <div class="section-title">
-                <span>Laten we praten</span>
-                <h2>Contact</h2>
-            </div>
-            <div class="contact-form-wrapper">
-                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem; color: var(--text-muted);">
-                    Het contactformulier is binnenkort beschikbaar. U kunt ons in de tussentijd bereiken via de onderstaande contactgegevens.
-                </p>
-                <!-- 
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Naam</label>
-                        <input type="text" id="name" name="name" placeholder="Uw naam" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="Uw e-mailadres" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Bericht</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Uw bericht" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Verstuur Bericht</button>
-                </form>
-                -->
-            </div>
-        </section>
+        </div>
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-contact">
-                <p><span class="icon">📞</span> 0473 63.29.48</p>
-                <p><span class="icon">✉️</span> foto.vip@skynet.be</p>
-            </div>
-            <p>&copy; <span class="current-year">2026</span> VIP Fotografie Paul Van Impe. Alle rechten voorbehouden.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
